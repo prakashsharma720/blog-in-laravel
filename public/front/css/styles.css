@@ -4189,7 +4189,7 @@ body.search-is-visible {
 
 .s-hero__slide-text {
     font-family: var(--font-3);
-    font-size: 8.8rem;
+    font-size: 5.8rem;
     font-weight: 400;
     line-height: 1.091;
     letter-spacing: -.01em;
@@ -4329,7 +4329,7 @@ body.search-is-visible {
 
 @media screen and (max-width: 1400px) {
     .s-hero__slide-text {
-        font-size: 7.8rem;
+        font-size: 5.8rem;
     }
 }
 

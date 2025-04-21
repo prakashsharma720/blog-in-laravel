@@ -23,7 +23,7 @@ require __DIR__.'/auth.php';
 // frontend pages 
 Route::get('/', 'PageController@index')->name('home');
 Route::get('/posts', 'PageController@posts')->name('posts');
-Route::get('/posts/{post}', 'PageController@showPost')->name('posts.view');
+Route::get('/posts/{post:slug}', 'PageController@showPost')->name('posts.view');
 Route::get('/category/{category}', 'PageController@showCategory')->name('categories.view');
 
 // admin pages 

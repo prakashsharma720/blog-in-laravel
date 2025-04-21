@@ -10,6 +10,12 @@
 
                         <div class="row s-hero__slide-content animate-this">
                             <div class="column">
+
+                                <h1 class="s-hero__slide-text" style="margin-bottom:5px;">
+                                    <a href="{{ route('posts.view', $post->id) }}">
+                                        {{ $post->title }}
+                                    </a>
+                                </h1>
                                 <div class="s-hero__slide-meta">
                                     <span class="cat-links">
                                         <a href="#0">{{ $post->categories->first()->title }}</a>
@@ -21,11 +27,6 @@
                                         </span>
                                     </span>
                                 </div>
-                                <h1 class="s-hero__slide-text">
-                                    <a href="#0">
-                                        {{ $post->title }}
-                                    </a>
-                                </h1>
                             </div>
                         </div>
 
@@ -66,7 +67,7 @@
                             <article class="brick entry" data-aos="fade-up">
 
                                 <div class="entry__thumb">
-                                    <a href="{{ route('posts.view', $post->id) }}" class="thumb-link">
+                                    <a href="{{ route('posts.view', $post->slug) }}" class="thumb-link">
                                         <img src="{{ asset('images/' . $post->image) }}" alt="">
                                     </a>
                                 </div> <!-- end entry__thumb -->
@@ -74,7 +75,7 @@
                                 <div class="entry__text">
                                     <div class="entry__header">
                                         <h1 class="entry__title"><a
-                                                href="{{ route('posts.view', $post->id) }}">{{ $post->title }}</a></h1>
+                                                href="{{ route('posts.view', $post->slug) }}">{{ $post->title }}</a></h1>
 
                                         <div class="entry__meta">
                                             <span class="byline">By:
@@ -92,7 +93,7 @@
                                             {{ $post->excerpt }}
                                         </p>
                                     </div>
-                                    <a class="entry__more-link" href="{{ route('posts.view', $post->id) }}">Learn
+                                    <a class="entry__more-link" href="{{ route('posts.view', $post->slug) }}">Learn
                                         More</a>
                                 </div> <!-- end entry__text -->
 

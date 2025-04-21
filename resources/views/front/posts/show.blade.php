@@ -50,7 +50,7 @@
                         <div class="s-content__pagenav">
                             @if ($post->previousPost())
                                 <div class="prev-nav">
-                                    <a href="{{ route('posts.view', $post->previousPost()->id) }}" rel="prev">
+                                    <a href="{{ route('posts.view', $post->previousPost()->slug) }}" rel="prev">
                                         <span>Previous</span>
                                         {{ $post->previousPost()->title }}
                                     </a>
@@ -58,7 +58,7 @@
                             @endif
                             @if ($post->nextPost())
                                 <div class="next-nav">
-                                    <a href="{{ route('posts.view', $post->nextPost()->id) }}" rel="next">
+                                    <a href="{{ route('posts.view', $post->nextPost()->slug) }}" rel="next">
                                         <span>Next</span>
                                         {{ $post->nextPost()->title }}
                                     </a>

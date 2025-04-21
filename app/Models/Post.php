@@ -45,10 +45,10 @@ class Post extends Model
     }
 
     public function previousPost(){
-        return  Post::where('id', '<', $this->id)->orderBy('id','desc')->first();
+        return  Post::where('slug', '<', $this->slug)->orderBy('id','desc')->first();
     }
 
     public function nextPost(){
-        return Post::where('id', '>', $this->id)->orderBy('id')->first();
+        return Post::where('slug', '>', $this->slug)->orderBy('id')->first();
     }
 }
